@@ -12,23 +12,17 @@ body {
     width: 60vw;
     height: 80vh;
     margin: 0 auto;
-    
-    /* display: flex; */
-    border: 1px solid red;
-    /* flex-direction: column;
-    align-items: baseline; */
 }
 .slides {
     width: inherit;
     height: calc(80%); 
     overflow: hidden;
     position: relative;
-    border: 1px solid yellowgreen;
     margin-bottom: 0;
 }
 .slides > div {
-    /* position: absolute;
-    top: 0; */
+    position: absolute;
+    
     width: inherit;
     height:100%;
     background-repeat: no-repeat;
@@ -36,7 +30,7 @@ body {
     z-index: 0;
     opacity: 0;
     
-    transform: scale(1.36);
+    transform: scale(1.62);
     transition: transform ease-in-out .5s, opacity 0s;
 }
 
@@ -53,7 +47,6 @@ body {
     background-image: url(/cssMemSlider/cssMemSlider/images/boy.png);
 }
 .bottom-block {
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     margin: 15px 0 15px 0;
@@ -62,71 +55,69 @@ input {
     display: none;
 }
 .controls > label {
-    /* appearance: none; */
-    /* line-height: 20px; */
     cursor: pointer;
     display: inline-block;
     height: 12px;
     width: 12px;
     border-radius: 50%;
     background: #6495ED;
-    margin-left: 5px;
-
-    /* display: none; */
-}
-/* .controls > label {
-    cursor: pointer;
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    line-height: 25px;
-    margin: 0;
-   
-} */
-/* .controls > label:after {
     border: 2px solid #6495ED;
-    content: " ";
-    display: block;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    left: -4px;
-	position: absolute;
-	top: -4px;
-    
-} */
-
-.controls > label > input:checked {
-    border: 2px solid whitesmoke;
-    background: #696969;
-    
-  }
-.controls > label > input:hover {    
-    background: whitesmoke;
-    /* transition: transform ease-in-out .5s; */
+    margin-left: 5px;
+    line-height: 20px;
 }
-/* .controls > label > input > #btn-1:checked ~ .slide-1, */
-/* .bottom-block > .controls > label > input >  */
+.controls > label:hover{    
+    background: whitesmoke;
+    border-color: whitesmoke;
+    transition: background ease-in-out .5s;
+}
+input:checked {
+    border: 2px solid #6495ED;
+    background: #696969;
+}
+.bottom-block > .discription > div{
+    z-index: 0;
+    opacity: 0;
+    transform: scale(0.62);
+    transition: transform ease-in-out .5s, opacity .5s;
+}
 #btn-1:checked  ~ .slides > .slide-1, 
-    #btn-2:checked  ~ .slides > .slide-2, 
-    #btn-3:checked  ~ .slides > .slide-3,
-    #btn-4:checked  ~ .slides > .slide-4 {  
+#btn-2:checked  ~ .slides > .slide-2, 
+#btn-3:checked  ~ .slides > .slide-3,
+#btn-4:checked  ~ .slides > .slide-4 {  
     opacity: 1;
     z-index: 1;
     transform: scale(1);
-    -moz-transform: scale(1);    
-    
+    -moz-transform: scale(1);   
 }
 #btn-2:checked  ~ .slides > .slide-2 {
-    margin-top: -70%;
+    top: 30%;
 }
 #btn-3:checked  ~ .slides > .slide-3 {
-    margin-top: -160%;
+    top: 30%;
 }
 #btn-4:checked  ~ .slides > .slide-4 {
-    margin-top: -250%;
+    top: 30%;
 }
- 
-/* #btn-1:checked  ~ [class^=discription-1] {
-   display: none;
-} */
+#btn-1:checked  ~ .bottom-block > .discription > .discription-1,
+#btn-2:checked  ~ .bottom-block > .discription > .discription-2,
+#btn-3:checked  ~ .bottom-block > .discription > .discription-3, 
+#btn-4:checked  ~ .bottom-block > .discription > .discription-4 {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+    -moz-transform: scale(1);  
+}
+#btn-1:checked  ~ .bottom-block > .controls > #ctrl-1, 
+#btn-2:checked  ~ .bottom-block > .controls > #ctrl-2, 
+#btn-3:checked  ~ .bottom-block > .controls > #ctrl-3,
+#btn-4:checked  ~ .bottom-block > .controls > #ctrl-4 {
+    border: 2px solid #6495ED;
+    background: #696969;
+}
+#btn-1:hover  ~ .bottom-block > .controls > #ctrl-1,
+#btn-2:hover  ~ .bottom-block > .controls > #ctrl-2,
+#btn-3:hover  ~ .bottom-block > .controls > #ctrl-3,
+#btn-4:hover  ~ .bottom-block > .controls > #ctrl-4 {
+    background: whitesmoke;
+}
+  
