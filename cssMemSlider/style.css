@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    overflow-y: hidden;
+}
+body {
+    background-color: #696969;
+    font-family: 'oswald', sans-serif;
+    color: whitesmoke;
+}
+.mem-slider {
+    position: relative;
+    width: 600px;
+    height: 80vh;
+    margin: 0 auto;
+    /* display: flex; */
+    border: 1px solid red;
+    /* flex-direction: column;
+    align-items: baseline; */
+}
+.slides {
+    width: inherit;
+    height: calc(80%); 
+    overflow: hidden;
+    position: relative;
+    border: 1px solid yellowgreen;
+}
+.slides > div {
+    width: inherit;
+    height:inherit;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.slide-1 {
+    background-image: url(/cssMemSlider/cssMemSlider/images/girl-dont-know.jpg);
+}
+.slide-2 {
+    background-image: url(/cssMemSlider/cssMemSlider/images/Boromir.jpg);
+}
+.slide-3 {
+    background-image: url(/cssMemSlider/cssMemSlider/images/Yoda.jpg);
+}
+.slide-3 {
+    background-image: url(/cssMemSlider/cssMemSlider/images/boy.png);
+}
+.bottom-block {
+    border: 1px solid red;
+}
+.controls > input {
+    /* display: none; */
+}
