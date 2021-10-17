@@ -120,8 +120,7 @@ input:checked {
 #btn-4:hover  ~ .bottom-block > .controls > #ctrl-4 {
     background: whitesmoke;
 }
-
-@media (max-width: 750px) {
+@media (max-width: 755px) {
     .bottom-block {
         flex-direction: column-reverse;
         margin: 0;
@@ -134,3 +133,4 @@ input:checked {
         margin-bottom: 15px;
     }
 }
+/* NEW COMMIT */
