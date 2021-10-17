@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 body {
     background-color: #696969;
@@ -9,7 +9,7 @@ body {
 }
 .mem-slider {
     position: relative;
-    width: 50vw;
+    width: 100vw;
     height: 100vh;
     margin: 0 auto;
 }
@@ -49,7 +49,10 @@ body {
 .bottom-block {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0 15px 0;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 40vw;
+
 }
 input {
     display: none;
@@ -123,8 +126,9 @@ input:checked {
 @media (max-width: 755px) {
     .bottom-block {
         flex-direction: column-reverse;
-        margin: 0;
+        
         min-height: 155px;
+        width: 70vw;
     }
     .bottom-block > .controls {
         display: inline-block;
